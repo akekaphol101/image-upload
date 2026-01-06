@@ -18,7 +18,7 @@ export default async function handler(req, res) {
     version: "v4",
     action: "write",
     expires: Date.now() + 15 * 60 * 1000, // หมดอายุใน 15 นาที
-    contentType: "image/jpeg", // ระบุประเภทไฟล์เพื่อความปลอดภัย
+    contentType: req.query.contentType || "application/octet-stream", // ระบุประเภทไฟล์เพื่อความปลอดภัย
   });
 
   // 3. ส่ง URL กลับไปให้ Frontend
