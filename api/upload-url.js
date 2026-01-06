@@ -21,6 +21,9 @@ export default async function handler(req, res) {
     contentType: req.query.contentType || "application/octet-stream", // ระบุประเภทไฟล์เพื่อความปลอดภัย
   });
 
+  // สร้าง public URL แบบ manual (Format มาตรฐานของ GCS)
+  const publicUrl = `https://storage.googleapis.com/${process.env.GCS_BUCKET_NAME}/${req.query.filename}`;
+
   // 3. ส่ง URL กลับไปให้ Frontend ทั้งคู่
   res.status(200).json({ url, publicUrl });
 }
