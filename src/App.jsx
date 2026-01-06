@@ -77,7 +77,7 @@ function App() {
         margin: "0 auto",
       }}
     >
-      <h2>อัพโหลดรูปภาพ (GCS + Vercel)</h2>
+      <h2>อัพโหลดรูปภาพ (CTRL AKE)</h2>
 
       {/* ส่วนเลือกไฟล์ */}
       <div style={{ marginBottom: "20px" }}>
