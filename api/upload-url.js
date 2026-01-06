@@ -21,6 +21,6 @@ export default async function handler(req, res) {
     contentType: req.query.contentType || "application/octet-stream", // ระบุประเภทไฟล์เพื่อความปลอดภัย
   });
 
-  // 3. ส่ง URL กลับไปให้ Frontend
-  res.status(200).json({ url });
+  // 3. ส่ง URL กลับไปให้ Frontend ทั้งคู่
+  res.status(200).json({ url, publicUrl });
 }
